@@ -1,4 +1,4 @@
-package Lesson4;
+package Lesson10.Homework10.Task1.Task3;
 
 import java.util.Random;
 
@@ -44,7 +44,7 @@ public class Array {
     }
 
     public void swapPairElements(int argument) {
-        for (int index = 0; index < arr.length ; index++) {
+        for (int index = 0; index < arr.length; index++) {
             if (arr[index] % 2 == 0) {
                 arr[index] = argument;
             }
@@ -54,12 +54,43 @@ public class Array {
     }
 
     public void fillArray() {
-        for (int index = 0; index < arr.length ; index++) {
-            arr[index] = new Random().nextInt(100);
+        for (int index = 0; index < arr.length; index++) {
+            arr[index] = new Random().nextInt(5);
         }
     }
 
     public void printArray() {
+        for (int element : arr) {
+            System.out.println(element);
+        }
+    }
+
+    public void deleteElementInArray (int index) {
+        if (index == 0) {
+            int[] arr2 = new int[arr.length - 1];
+            System.arraycopy(arr, 1, arr2, 0, arr2.length);
+            arr = arr2;
+        } else if (index == arr.length - 1) {
+            int[] arr2 = new int[arr.length - 1];
+            for (int i = 0; i < arr.length - 1; i++) {
+                arr2[i] = arr[i];
+            }
+            arr = arr2;
+        } else {
+            int[] arr2 = new int[arr.length - 1];
+            for (int i = 0; i < arr.length; i++) {
+                if (i > index) {
+                    arr2[i - 1] = arr[i];
+                }
+                if (i == index) {
+                    continue;
+                }
+                if (i < index) {
+                    arr2[i] = arr[i];
+                }
+            }
+            arr = arr2;
+        }
         for (int element : arr) {
             System.out.println(element);
         }
