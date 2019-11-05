@@ -2,11 +2,11 @@ package Lesson11;
 
 import java.time.LocalDateTime;
 
-public class Task2 {
+public class TimeUpdate {
     private int dataNumber;
     private LocalDateTime updatedDate;
 
-    public Task2(int dataNumber, LocalDateTime updatedDate) {
+    public TimeUpdate(int dataNumber, LocalDateTime updatedDate) {
         this.dataNumber = dataNumber;
         this.updatedDate = updatedDate;
     }

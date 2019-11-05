@@ -5,6 +5,7 @@ public class Main {
         var array = new Array(5);
         array.fillArray();
         array.printArray();
+        System.out.println("  ");
         array.deleteElementInArray(2);
 
     }

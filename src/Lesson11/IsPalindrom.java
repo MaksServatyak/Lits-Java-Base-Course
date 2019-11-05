@@ -1,6 +1,6 @@
 package Lesson11;
 
-public class Task5 {
+public class IsPalindrom {
     String text;
 
     public void isPalindrom(String text) {
@@ -12,7 +12,7 @@ public class Task5 {
                 k++;
 
                 if (text.charAt(text.length() - 1 - i) != text.charAt(i)) {
-                    System.out.println("не є поліндромом");
+                    System.out.println("it is not palindom");
                     break;
                 }
             }
@@ -20,9 +20,7 @@ public class Task5 {
 
         }
         if (k<=text.length()-k){
-            System.out.println("поліндром");
-        }else {
-            System.out.println(858);
+            System.out.println("it is palindrom");
         }
 
 
