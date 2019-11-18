@@ -14,16 +14,21 @@ public class Employee implements Comparable<Employee>{
         @Override
         public int hashCode() {
             return Objects.hash();
+
         }
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Employee employee = (Employee) o;
-            return age == employee.age && Objects.equals(name, employee.name);
-        }
+            if (o==null){
+                return false;
+            }
+            if (!(o instanceof Employee)) {
+                return false;
 
+            }
+            Employee employee=(Employee)o;
+            return employee.name==name && employee.age==age;
+        }
 
         @Override
         public int compareTo(Employee o) {
