@@ -8,6 +8,7 @@ public class StringBilder {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     String name = reader.readLine();
     StringBuilder stringBuilder = new StringBuilder(name);
+    private boolean StringBilder;
 
     public StringBilder() throws IOException {
     }
@@ -16,7 +17,10 @@ public class StringBilder {
         System.out.println(name);
         stringBuilder.deleteCharAt(2);
         stringBuilder.reverse();
-        stringBuilder.append(2);
+        StringBuilder c = stringBuilder.append(2);
+        StringBilder=false;
+
+
         System.out.println(stringBuilder);
 
         stringBuilder.delete(0, stringBuilder.length());

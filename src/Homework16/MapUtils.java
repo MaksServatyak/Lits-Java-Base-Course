@@ -4,6 +4,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public final class MapUtils {
+    private MapUtils() {
+    }
 
     public static TreeMap<String, String> change(TreeMap<String,String> map){
         var map2=new TreeMap<String,String>();

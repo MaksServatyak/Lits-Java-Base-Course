@@ -4,6 +4,10 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public final class StringUtils {
+    private StringUtils() {
+    }
+
+
     public static void numberChars(String text) {
 
         if (text != null) {

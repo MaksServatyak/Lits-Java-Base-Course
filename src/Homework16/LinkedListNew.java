@@ -33,13 +33,13 @@ public class LinkedListNew<T> {
         }
     }
 
-    public void remove(T data) {
+    public boolean remove(T data) {
         if (this.first == null) {
             throw new NoSuchElementException();
         } else if (this.first.getData().equals(data)) {
             this.first = this.first.getNext();
             this.size--;
-            return;
+            return remove(data);
         }
 
         Node<T> current = this.first;
@@ -51,7 +51,7 @@ public class LinkedListNew<T> {
                     this.last = current;
                 }
                 this.size--;
-                return;
+                return true;
             }
             current = next;
             next = current.getNext();
