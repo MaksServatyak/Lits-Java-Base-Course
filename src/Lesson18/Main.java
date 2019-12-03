@@ -88,6 +88,12 @@ public class Main {
         task.stream().filter(t -> t.getTags().equals("book")).filter(t -> t.getType().equals(Type.READING))
                 .distinct().forEach(System.out::println);
 
+
+        long count = task.stream().filter(t -> t.getType().equals(Type.DONE)).count();
+        System.out.println(count);
+
+        task.stream().map(Task::getTags).distinct().forEach(System.out::println);
+
     }
 
 
